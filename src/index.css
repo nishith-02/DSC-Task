@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  max-height: 1000vh;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(-135deg,#4ca1af , #c4e0e5);
+}
+.secondclass{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.thirdclass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left:178px;
+    margin-right: 178px;
+    margin-top:30px;
+    color:#fff;
+    border: 1px solid black;
+}
+.img{
+    width:10%;
+}
+.hide{
+    display:none;
+}
+.secondclass{
+    margin-top:140px;
+}
+button{
+    box-shadow: 0 0 4px #999;
+    letter-spacing: 2px;
+    background:linear-gradient(90deg,#0162c8,#55e7fc);
+    border-radius: 40px;
+    padding: 20px;
+    width: 20%;
+    height: 35%;
+    cursor: pointer;
+    outline: none;
+    border:1px solid #0162c8;
+}
+.ripple{
+    background-position: center;
+    transition: background 0.8s;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.ripple:hover{
+    background:linear-gradient(90deg,#0162c8,#55e7fc);
+    background-image: radial-gradient(circle,transparent 1%,linear-gradient(90deg,#0162c8,#55e7fc) 1%);
+    background-position: center;
+    background-size: 15000%;
+}
+.ripple:active{
+    transition: background 0s;
+    background-color: #fff;
+    background-size: 100%;
+}
+.wrapper{
+    width: 384px;
+    background: #fff;
+    padding: 7px;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    margin-top: 100px;
+}
+.wrapper .input-data{
+  height: 40px;
+  width: 100%;
+  position: relative; 
+}
+.wrapper .input-data input{
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid silver;
+}
+.input-data input:focus ~ label,
+.input-data input:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #4158d0;
+}
+.wrapper .input-data label{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.input-data .underline{
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+}
+.input-data .underline:before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #4158d0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before{
+  transform: scaleX(1);
+}
+.body{
+  background: linear-gradient(90deg,#4ca1af , #c4e0e5);
+}
